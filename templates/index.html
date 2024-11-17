@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+    <a href="/register">Registrar Produto</a>
+    <a href="/report">Ver Relatórios</a>
+    <h2>Produtos</h2>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product[1] }}</td>
+            <td>{{ product[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
